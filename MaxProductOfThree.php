@@ -31,3 +31,18 @@ expected worst-case time complexity is O(N*log(N));
 expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
 Elements of input arrays can be modified.
 */
+
+/*
+Test score
+44%
+44 out of 100 points
+*/
+
+function solution($A) {
+    rsort($A);
+    $count = (count($A) > 3 ) ? 3 : count($A);
+    $result = 1;
+    for ( $i = 0; $i < $count; ++$i )
+        $result = ($result * $A[$i]);
+    return $result;
+}
